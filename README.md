@@ -2,19 +2,19 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Prototipo 1
-¿Qué supuesto pretende probar con este prototipo?
+### ¿Qué supuesto pretende probar con este prototipo?
 
 Si era posible generar un formulario adecuado para darle uso a la toma de datos de pacientes y conocer futuros cambios, adiciones y errores que pudieras surgir durante el proceso.
 
-¿Qué aprendió en este primer prototipo?
+### ¿Qué aprendió en este primer prototipo?
 
 Se aprendio que las herramientas utilizadas darian un producto adecuado para los requisitos del proyecto.
 
-¿Cuáles serán los pasos para un siguiente prototipo?
+### ¿Cuáles serán los pasos para un siguiente prototipo?
 
 Generar la pare analitica del proyecto a partir de la fase de recoleccion de datos ya que estos ultimos son de absoluta importancia para el analisis estadistico y matematico.
 
-¿Se necesita hacer algún cambio en el protocolo, derivado del aprendizaje en este prototipo?
+### ¿Se necesita hacer algún cambio en el protocolo, derivado del aprendizaje en este prototipo?
 
 Una interfaz esteticamente màs agradable a la vista.
 
