@@ -52,13 +52,56 @@ export class Confirmar extends Component {
                     Dashboard
                   </Button>
                   <Menu {...bindMenu(popupState)}>
-                    <MenuItem onClick={popupState.close}>ABCD</MenuItem>
-                    <MenuItem onClick={popupState.close}>NIHSS</MenuItem>
-                    <MenuItem onClick={popupState.close}>ASPECTS</MenuItem>
-                    <MenuItem onClick={popupState.close}>DRAGON</MenuItem>
-                    <MenuItem onClick={popupState.close}>HAT</MenuItem>
-                    <MenuItem onClick={popupState.close}>SEDAN</MenuItem>
-                  </Menu>
+                    <MenuItem>
+                        <Button
+                            color="primary"
+                            variant="contained"
+                            onClick={this.nuevaFicha}
+                        >Nueva Ficha</Button>
+                    </MenuItem>
+                  <MenuItem>
+                    <Button
+                      color="primary"
+                      variant="contained"
+                      onClick={this.irAbcd}
+                    >ABCD</Button>
+                  </MenuItem>
+                  <MenuItem>
+                    <Button
+                      color="primary"
+                      variant="contained"
+                      onClick={this.irAbcd}
+                    >NIHSS</Button>
+                  </MenuItem>
+                  <MenuItem>
+                    <Button
+                      color="primary"
+                      variant="contained"
+                      onClick={this.irAbcd}
+                    >ASPECTS</Button>
+                  </MenuItem>
+                  <MenuItem >
+                  <Button
+                    color="primary"
+                    variant="contained"
+                    onClick={this.irAbcd}
+                  >DRAGON</Button>
+                  </MenuItem>
+                  <MenuItem>
+                    <Button
+                      color="primary"
+                      variant="contained"
+                      onClick={this.irAbcd}
+                    >HAT</Button>
+                  </MenuItem>
+                  <MenuItem>
+                  <Button
+                    color="primary"
+                    variant="contained"
+                    onClick={this.irAbcd}
+                  >SEDAN</Button>
+                  </MenuItem>
+                </Menu>
                 </React.Fragment>
               )}
             </PopupState>

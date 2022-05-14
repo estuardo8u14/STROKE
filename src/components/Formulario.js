@@ -4,7 +4,8 @@ import Ficha from './Ficha';
 import FormPersonalDetails from './SignosVitales';
 import Confirmar from './Confirmar';
 import Exito from './Exito';
-import ABCD from './ABCD.js';
+import ABCD from './ABCD';
+import ABCDRes from './ABCDRes';
 
 
 
@@ -40,7 +41,15 @@ export class Formulario extends Component {
       padecimientoActual:'',
       presionArterial:'',
       glucometro:'',
-      comentarios:''
+      comentarios:'',
+      /**ABCD */
+      mayorSesenta:'',
+      mayorSientoCuarentanoventa:'',
+      manifestaciones:'',
+      duracion:'',
+      diabetes:''
+      /** */
+      
     });
   };
 
@@ -85,8 +94,8 @@ export class Formulario extends Component {
 
   render() {
     const { step } = this.state;
-    const { usuarioRegistrando, nombrePaciente, ultimaHora, entradaHora, edadPaciente, laborPaciente, condicionesMedicas, txActual, padecimientoActual, presionArterial, glucometro, comentarios } = this.state;
-    const valores = { usuarioRegistrando, nombrePaciente, ultimaHora, entradaHora, edadPaciente, laborPaciente, condicionesMedicas, txActual, padecimientoActual, presionArterial, glucometro, comentarios };
+    const { usuarioRegistrando, nombrePaciente, ultimaHora, entradaHora, edadPaciente, laborPaciente, condicionesMedicas, txActual, padecimientoActual, presionArterial, glucometro, comentarios, mayorSesenta, mayorCientoCuarentanoventa, manifestaciones, duracion, diabetes } = this.state;
+    const valores = { usuarioRegistrando, nombrePaciente, ultimaHora, entradaHora, edadPaciente, laborPaciente, condicionesMedicas, txActual, padecimientoActual, presionArterial, glucometro, comentarios, mayorSesenta, mayorCientoCuarentanoventa, manifestaciones, duracion, diabetes };
 
     <header>
       <AppBar>{this.titulo()}</AppBar>
@@ -99,6 +108,7 @@ export class Formulario extends Component {
             sigStep={this.sigStep}
             handleCambio={this.handleCambio}
             valores={valores}
+            sigAbcd={this.sigAbcd}  
           />
         );
       case 2:
@@ -108,6 +118,7 @@ export class Formulario extends Component {
             anteStep={this.anteStep}
             handleCambio={this.handleCambio}
             valores={valores}
+            sigAbcd={this.sigAbcd}
           />
         );
       case 3:
@@ -116,19 +127,36 @@ export class Formulario extends Component {
             sigStep={this.sigStep}
             anteStep={this.anteStep}
             valores={valores}
+            sigAbcd={this.sigAbcd}
           />
         );
       case 4:
         return (
         <Exito 
-          newForm={this.newForm}                 
+          newForm={this.newForm}   
+          sigAbcd={this.sigAbcd}              
         />
         );
       case 5:
         return (
           <ABCD 
+            sigStep={this.sigStep}
+            anteStep={this.anteStep}
+            valores={valores}
             handleCambio={this.handleCambio}
-            goABCD={this.goABCD}          
+            newForm={this.newForm} 
+            sigAbcd={this.sigAbcd}
+          />
+        );
+        case 6:
+        return (
+          <ABCDRes 
+            sigStep={this.sigStep}
+            anteStep={this.anteStep}
+            valores={valores}
+            handleCambio={this.handleCambio}
+            newForm={this.newForm}
+            sigAbcd={this.sigAbcd} 
           />
         );
       default:
